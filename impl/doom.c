@@ -9,8 +9,6 @@
 
 #include <string.h>
 
-int global_slop = 1;
-
 char* better_getenv(const char *name) {
     if (strcmp(name, "HOME") == 0) {
         return "";
@@ -24,7 +22,6 @@ int main(int argc, char** argv)
     doom_init(argc, argv, 0);
     while (true)
     {
-        global_slop += 1;
         doom_update();
     }
 }
